@@ -1,0 +1,47 @@
+{
+  "name": "whiskedaway-mern",
+  "version": "1.0.0",
+  "description": "Pantry-first recipe finder web app built on the MERN stack (MongoDB, Express, React, Node.js).",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "server": "nodemon server/index.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-client": "cd client && npm install",
+    "build": "cd client && npm install && npm run build",
+    "seed": "node server/seeders/seedData.js",
+    "test": "jest server/tests/auth.test.js --runInBand --forceExit"
+  },
+  "keywords": [
+    "mern",
+    "recipe-finder",
+    "react",
+    "express",
+    "mongodb",
+    "nodejs",
+    "pantry"
+  ],
+  "author": "whiskedaway",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.16",
+    "resend": "^4.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "supertest": "^7.0.0"
+  }
+}
