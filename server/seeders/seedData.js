@@ -160,7 +160,7 @@ const INITIAL_RECIPES = [
       { name: "Chili Powder", amount: "1", unit: "tbsp", category: "Spices & Herbs" },
       { name: "Garlic Powder", amount: "1", unit: "tsp", category: "Spices & Herbs" },
       { name: "Tortillas", amount: "8", unit: "small", category: "Grains & Staples" },
-      { name: "Lime", amount: "1", unit: "juiced", category: "Vegetables" }
+      { name: "Lime Juice", amount: "1", unit: "tbsp", category: "Pantry" }
     ],
     dietary: ["High-Protein", "Quick"],
     instructions: [
@@ -228,8 +228,8 @@ const INITIAL_RECIPES = [
       { name: "Ginger", amount: "1", unit: "tbsp minced", category: "Vegetables" },
       { name: "Garam Masala", amount: "1", unit: "tbsp", category: "Spices & Herbs" },
       { name: "Turmeric", amount: "1", unit: "tsp", category: "Spices & Herbs" },
-      { name: "Coconut Milk", amount: "0.5", unit: "cup", category: "Dairy & Pantry" },
-      { name: "Rice", amount: "for serving", unit: "", category: "Grains & Staples" }
+      { name: "Coconut Milk", amount: "0.5", unit: "cup", category: "Pantry" },
+      { name: "Basmati Rice", amount: "for serving", unit: "", category: "Grains & Staples" }
     ],
     dietary: ["Vegan", "Vegetarian", "Gluten-Free", "Quick"],
     instructions: [
@@ -385,7 +385,7 @@ const INITIAL_RECIPES = [
     image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=800&q=80",
     ingredients: [
       { name: "Black Beans", amount: "1", unit: "can (400g)", category: "Grains & Staples" },
-      { name: "Corn", amount: "1", unit: "cup canned/frozen", category: "Vegetables" },
+      { name: "Peas", amount: "1", unit: "cup sweet corn", category: "Vegetables" },
       { name: "Tortillas", amount: "6", unit: "small corn", category: "Grains & Staples" },
       { name: "Avocado", amount: "1", unit: "sliced", category: "Vegetables" },
       { name: "Onion", amount: "0.5", unit: "diced", category: "Vegetables" },
@@ -544,7 +544,7 @@ const INITIAL_RECIPES = [
     image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80",
     ingredients: [
       { name: "Shrimp", amount: "400", unit: "g peeled", category: "Proteins" },
-      { name: "Pasta", amount: "250", unit: "g spaghetti", category: "Grains & Staples" },
+      { name: "Spaghetti", amount: "250", unit: "g", category: "Grains & Staples" },
       { name: "Spinach", amount: "2", unit: "cups fresh", category: "Vegetables" },
       { name: "Garlic", amount: "5", unit: "cloves minced", category: "Vegetables" },
       { name: "Butter", amount: "3", unit: "tbsp", category: "Dairy & Pantry" },
@@ -606,7 +606,7 @@ const INITIAL_RECIPES = [
     image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80",
     ingredients: [
       { name: "Kidney Beans", amount: "1", unit: "can (400g)", category: "Grains & Staples" },
-      { name: "Pasta", amount: "0.5", unit: "cup small ditalini", category: "Grains & Staples" },
+      { name: "Penne Pasta", amount: "0.5", unit: "cup small pasta", category: "Grains & Staples" },
       { name: "Tomatoes", amount: "1", unit: "can (400g diced)", category: "Vegetables" },
       { name: "Zucchini", amount: "1", unit: "diced", category: "Vegetables" },
       { name: "Carrots", amount: "2", unit: "diced", category: "Vegetables" },
@@ -656,6 +656,531 @@ const INITIAL_RECIPES = [
       "Slice in half and serve warm."
     ],
     nutrition: { calories: 420, protein: 22, carbs: 36, fat: 20, fiber: 5, sodium: 680 }
+  },
+  {
+    recipeId: "rec-21",
+    title: "Authentic Roman Spaghetti alla Carbonara",
+    summary: "Silky Roman pasta coated in a rich emulsion of egg yolks, crispy bacon/guanciale, freshly cracked black pepper, and sharp Pecorino cheese.",
+    cuisine: "Italian",
+    category: "Dinner",
+    difficulty: "Medium",
+    prepTime: 10,
+    cookTime: 15,
+    servings: 2,
+    rating: 5.0,
+    image: "https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=800&q=80",
+    ingredients: [
+      { name: "Spaghetti", amount: "220", unit: "g", category: "Grains & Staples" },
+      { name: "Bacon", amount: "120", unit: "g diced", category: "Proteins" },
+      { name: "Eggs", amount: "3", unit: "yolks + 1 whole egg", category: "Proteins" },
+      { name: "Pecorino Cheese", amount: "0.75", unit: "cup finely grated", category: "Dairy & Pantry" },
+      { name: "Salt & Black Pepper", amount: "freshly ground", unit: "", category: "Spices & Herbs" }
+    ],
+    dietary: ["High-Protein", "Quick"],
+    instructions: [
+      "Bring a pot of salted water to a boil and cook spaghetti until 1 minute shy of al dente.",
+      "While pasta cooks, crisp diced bacon in a large skillet over medium heat until golden and rendered. Turn off heat.",
+      "In a heatproof bowl, whisk egg yolks, whole egg, grated Pecorino cheese, and 1 tsp coarsely ground black pepper into a smooth paste.",
+      "Reserve 1/2 cup starchy pasta water, then transfer hot spaghetti directly into the pan with bacon grease.",
+      "Pour egg and cheese mixture over pasta while tossing vigorously. Add reserved pasta water 2 tbsp at a time to form a glossy, velvety sauce (do not cook on active heat to avoid scrambling eggs).",
+      "Serve immediately garnished with extra Pecorino and cracked black pepper."
+    ],
+    nutrition: { calories: 640, protein: 29, carbs: 70, fat: 28, fiber: 3, sodium: 790 }
+  },
+  {
+    recipeId: "rec-22",
+    title: "Crispy Chicken Parmigiana with Mozzarella",
+    summary: "Golden herb-breaded chicken breasts topped with rich marinara sauce, melted mozzarella, and fresh basil.",
+    cuisine: "Italian",
+    category: "Dinner",
+    difficulty: "Medium",
+    prepTime: 15,
+    cookTime: 20,
+    servings: 3,
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?auto=format&fit=crop&w=800&q=80",
+    ingredients: [
+      { name: "Chicken Breast", amount: "3", unit: "boneless cutlets", category: "Proteins" },
+      { name: "Mozzarella Cheese", amount: "1.5", unit: "cups shredded", category: "Dairy & Pantry" },
+      { name: "Parmesan Cheese", amount: "0.5", unit: "cup grated", category: "Dairy & Pantry" },
+      { name: "Tomato Sauce", amount: "1.5", unit: "cups marinara", category: "Pantry" },
+      { name: "Eggs", amount: "2", unit: "whisked", category: "Proteins" },
+      { name: "Bread", amount: "1", unit: "cup breadcrumbs", category: "Grains & Staples" },
+      { name: "Italian Seasoning", amount: "1", unit: "tbsp", category: "Spices & Herbs" },
+      { name: "Garlic Powder", amount: "1", unit: "tsp", category: "Spices & Herbs" }
+    ],
+    dietary: ["High-Protein"],
+    instructions: [
+      "Pound chicken cutlets to an even 1/2-inch thickness. Season with salt, pepper, and garlic powder.",
+      "Dip cutlets into whisked eggs, then press into breadcrumbs mixed with parmesan and Italian seasoning.",
+      "Heat 3 tbsp olive oil in a skillet over medium-high heat. Fry cutlets for 3-4 minutes per side until golden brown.",
+      "Transfer cutlets to a baking dish. Top each with a generous layer of marinara sauce and shredded mozzarella cheese.",
+      "Bake at 200°C (400°F) for 10 minutes until cheese is melted, golden, and bubbling.",
+      "Garnish with fresh basil and serve over warm spaghetti or garlic bread."
+    ],
+    nutrition: { calories: 540, protein: 48, carbs: 24, fat: 26, fiber: 3, sodium: 710 }
+  },
+  {
+    recipeId: "rec-23",
+    title: "Japanese Miso Glazed Salmon & Edamame Bowl",
+    summary: "Seared salmon fillet coated in a sweet white miso glaze, served over steamed rice with edamame, cucumber, and sesame seeds.",
+    cuisine: "Asian",
+    category: "Dinner",
+    difficulty: "Medium",
+    prepTime: 15,
+    cookTime: 12,
+    servings: 2,
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=80",
+    ingredients: [
+      { name: "Salmon Fillet", amount: "2", unit: "fillets (350g)", category: "Proteins" },
+      { name: "Miso Paste", amount: "2", unit: "tbsp white miso", category: "Pantry" },
+      { name: "Honey", amount: "1", unit: "tbsp", category: "Pantry" },
+      { name: "Soy Sauce", amount: "1", unit: "tbsp", category: "Pantry" },
+      { name: "Sesame Oil", amount: "1", unit: "tsp", category: "Pantry" },
+      { name: "Edamame", amount: "1", unit: "cup shelled", category: "Vegetables" },
+      { name: "Rice", amount: "2", unit: "cups cooked", category: "Grains & Staples" },
+      { name: "Cucumber", amount: "0.5", unit: "sliced", category: "Vegetables" }
+    ],
+    dietary: ["High-Protein", "Gluten-Free", "Quick"],
+    instructions: [
+      "In a small bowl, whisk white miso paste, honey, soy sauce, sesame oil, and 1 tbsp warm water into a smooth glaze.",
+      "Coat salmon fillets generously with miso glaze and marinade for 10 minutes.",
+      "Heat oil in an oven-safe skillet over medium-high heat. Sear salmon for 3 minutes skin-side down.",
+      "Transfer skillet under oven broiler for 4-5 minutes until glaze caramelizes into a golden crust.",
+      "Assemble bowls: layer warm rice, steamed edamame beans, sliced cucumber, and miso salmon on top.",
+      "Sprinkle with toasted sesame seeds and green onions before serving."
+    ],
+    nutrition: { calories: 510, protein: 41, carbs: 46, fat: 18, fiber: 5, sodium: 590 }
+  },
+  {
+    recipeId: "rec-24",
+    title: "Classic Thai Pad Thai with Shrimp & Peanuts",
+    summary: "Authentic stir-fried rice noodles in tangy tamarind sauce with jumbo shrimp, scrambled egg, bean sprouts, and roasted peanuts.",
+    cuisine: "Asian",
+    category: "Dinner",
+    difficulty: "Medium",
+    prepTime: 15,
+    cookTime: 12,
+    servings: 2,
+    rating: 5.0,
+    image: "https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=800&q=80",
+    ingredients: [
+      { name: "Rice Noodles", amount: "180", unit: "g flat rice noodles", category: "Grains & Staples" },
+      { name: "Shrimp", amount: "250", unit: "g raw peeled", category: "Proteins" },
+      { name: "Eggs", amount: "2", unit: "large", category: "Proteins" },
+      { name: "Tofu", amount: "100", unit: "g cubed firm", category: "Proteins" },
+      { name: "Peanut Butter", amount: "2", unit: "tbsp crushed peanuts", category: "Dairy & Pantry" },
+      { name: "Tamarind Paste", amount: "2", unit: "tbsp", category: "Pantry" },
+      { name: "Soy Sauce", amount: "2", unit: "tbsp", category: "Pantry" },
+      { name: "Lime Juice", amount: "1.5", unit: "tbsp", category: "Pantry" },
+      { name: "Green Onion", amount: "3", unit: "stalks cut 1-inch", category: "Vegetables" }
+    ],
+    dietary: ["High-Protein", "Gluten-Free", "Quick"],
+    instructions: [
+      "Soak flat rice noodles in warm water for 20 minutes until pliable, then drain.",
+      "Whisk tamarind paste, soy sauce, lime juice, brown sugar/honey, and 2 tbsp water to create Pad Thai sauce.",
+      "Heat 2 tbsp oil in a wok or large pan over high heat. Sear shrimp and tofu for 3 minutes until opaque. Remove shrimp.",
+      "Push noodles to side of pan, pour beaten eggs into center and scramble quickly.",
+      "Add soaked noodles and tamarind sauce. Toss vigorously for 2 minutes until noodles absorb sauce and become tender.",
+      "Fold in green onions, bean sprouts, cooked shrimp, and crushed peanuts. Serve with fresh lime wedges!"
+    ],
+    nutrition: { calories: 530, protein: 32, carbs: 62, fat: 17, fiber: 4, sodium: 740 }
+  },
+  {
+    recipeId: "rec-25",
+    title: "Korean Beef & Veggie Bibimbap Bowl",
+    summary: "Warm rice topped with sweet soy-garlic marinated beef, sautéed spinach, carrots, mushrooms, a fried egg, and spicy Gochujang.",
+    cuisine: "Asian",
+    category: "Dinner",
+    difficulty: "Medium",
+    prepTime: 20,
+    cookTime: 15,
+    servings: 2,
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&w=800&q=80",
+    ingredients: [
+      { name: "Ground Beef", amount: "250", unit: "g thin sliced steak or beef", category: "Proteins" },
+      { name: "Rice", amount: "2", unit: "cups cooked", category: "Grains & Staples" },
+      { name: "Eggs", amount: "2", unit: "large", category: "Proteins" },
+      { name: "Spinach", amount: "2", unit: "cups", category: "Vegetables" },
+      { name: "Carrots", amount: "1", unit: "julienned", category: "Vegetables" },
+      { name: "Mushrooms", amount: "1", unit: "cup sliced", category: "Vegetables" },
+      { name: "Gochujang", amount: "2", unit: "tbsp Korean chili paste", category: "Pantry" },
+      { name: "Sesame Oil", amount: "1", unit: "tbsp", category: "Pantry" },
+      { name: "Garlic", amount: "3", unit: "cloves minced", category: "Vegetables" }
+    ],
+    dietary: ["High-Protein"],
+    instructions: [
+      "Marinate sliced beef in 1 tbsp soy sauce, 1 tsp sesame oil, minced garlic, and sugar for 10 minutes.",
+      "In a hot skillet, sauté carrots, spinach, and mushrooms separately with a drop of sesame oil and salt. Set vegetables aside.",
+      "Stir-fry marinated beef over high heat for 4 minutes until caramelized and tender.",
+      "Fry eggs in skillet sunny-side up with runny yolks.",
+      "Assemble bowls: place warm rice in center, arrange vegetables and beef neatly around bowl.",
+      "Top with sunny-side up egg and a scoop of Gochujang paste. Mix everything thoroughly with a spoon before eating!"
+    ],
+    nutrition: { calories: 580, protein: 34, carbs: 64, fat: 20, fiber: 5, sodium: 670 }
+  },
+  {
+    recipeId: "rec-26",
+    title: "Rich Chicken Shoyu Ramen with Jammy Egg",
+    summary: "A comforting bowl of chicken dashi shoyu broth, springy ramen noodles, pan-seared chicken, baby bok choy, and marinated eggs.",
+    cuisine: "Asian",
+    category: "Dinner",
+    difficulty: "Medium",
+    prepTime: 15,
+    cookTime: 20,
+    servings: 2,
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80",
+    ingredients: [
+      { name: "Ramen Noodles", amount: "2", unit: "portions fresh wheat noodles", category: "Grains & Staples" },
+      { name: "Chicken Breast", amount: "250", unit: "g sliced", category: "Proteins" },
+      { name: "Eggs", amount: "2", unit: "soft-boiled (6.5 min)", category: "Proteins" },
+      { name: "Bok Choy", amount: "2", unit: "heads halved", category: "Vegetables" },
+      { name: "Soy Sauce", amount: "3", unit: "tbsp", category: "Pantry" },
+      { name: "Vegetable Broth", amount: "3", unit: "cups chicken/veg broth", category: "Pantry" },
+      { name: "Ginger", amount: "1", unit: "tbsp sliced", category: "Vegetables" },
+      { name: "Garlic", amount: "3", unit: "cloves crushed", category: "Vegetables" },
+      { name: "Sesame Oil", amount: "1", unit: "tbsp", category: "Pantry" }
+    ],
+    dietary: ["High-Protein"],
+    instructions: [
+      "Simmer broth with garlic, ginger, soy sauce, and sesame oil for 15 minutes to infuse deep shoyu flavor.",
+      "Boil eggs for exactly 6.5 minutes, plunge into ice water, peel, and cut in half.",
+      "Sear chicken slices in skillet until golden brown and cooked through.",
+      "Blanch halved bok choy in hot broth for 1.5 minutes until bright green.",
+      "Cook ramen noodles in boiling water according to package time (approx. 2 mins), then drain.",
+      "Divide noodles into deep ramen bowls, pour piping hot shoyu broth over noodles, and top with seared chicken, jammy egg halves, and bok choy."
+    ],
+    nutrition: { calories: 490, protein: 35, carbs: 54, fat: 15, fiber: 4, sodium: 880 }
+  },
+  {
+    recipeId: "rec-27",
+    title: "Slow-Cooked Beef Birria Tacos & Consomé",
+    summary: "Tender chili-braised shredded beef stuffed into corn tortillas, dipped in warm rich birria broth, and pan-crisped with cheese.",
+    cuisine: "Mexican",
+    category: "Dinner",
+    difficulty: "Hard",
+    prepTime: 20,
+    cookTime: 40,
+    servings: 4,
+    rating: 5.0,
+    image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=800&q=80",
+    ingredients: [
+      { name: "Beef Steak", amount: "600", unit: "g chuck roast / beef", category: "Proteins" },
+      { name: "Tortillas", amount: "8", unit: "corn tortillas", category: "Grains & Staples" },
+      { name: "Mozzarella Cheese", amount: "1.5", unit: "cups shredded quesadilla cheese", category: "Dairy & Pantry" },
+      { name: "Onion", amount: "1", unit: "diced", category: "Vegetables" },
+      { name: "Garlic", amount: "5", unit: "cloves", category: "Vegetables" },
+      { name: "Cumin", amount: "1", unit: "tsp", category: "Spices & Herbs" },
+      { name: "Oregano", amount: "1", unit: "tsp", category: "Spices & Herbs" },
+      { name: "Cilantro / Parsley", amount: "1", unit: "handful chopped", category: "Spices & Herbs" }
+    ],
+    dietary: ["High-Protein", "Gluten-Free"],
+    instructions: [
+      "Sear seasoned beef steak chunks in a hot dutch oven until browned on all sides.",
+      "Add diced onions, garlic, cumin, oregano, paprika, and 3 cups broth. Simmer covered on low heat for 35 minutes until beef is shreddable.",
+      "Shred beef with two forks and strain red spiced chili consomé broth into bowls.",
+      "Dip corn tortillas into warm chili oil from top of consomé broth.",
+      "Place tortillas in hot skillet, top with shredded cheese and juicy beef, fold in half, and fry until crispy on both sides.",
+      "Serve crispy tacos hot with bowls of warm consomé broth for dipping, topped with fresh cilantro and diced onion!"
+    ],
+    nutrition: { calories: 590, protein: 42, carbs: 32, fat: 31, fiber: 4, sodium: 730 }
+  },
+  {
+    recipeId: "rec-28",
+    title: "Peruvian Lomo Saltado Stir-Fry with Fries",
+    summary: "Iconic Peruvian beef stir-fry featuring tender sirloin strips, onions, tomatoes, and crispy French fries tossed in soy-vinegar sauce.",
+    cuisine: "Peruvian",
+    category: "Dinner",
+    difficulty: "Medium",
+    prepTime: 15,
+    cookTime: 12,
+    servings: 3,
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+    ingredients: [
+      { name: "Beef Steak", amount: "450", unit: "g sirloin sliced", category: "Proteins" },
+      { name: "Potatoes", amount: "3", unit: "cut into french fries", category: "Vegetables" },
+      { name: "Tomatoes", amount: "2", unit: "wedged", category: "Vegetables" },
+      { name: "Red Onion", amount: "1", unit: "thick sliced", category: "Vegetables" },
+      { name: "Soy Sauce", amount: "3", unit: "tbsp", category: "Pantry" },
+      { name: "Garlic", amount: "3", unit: "cloves minced", category: "Vegetables" },
+      { name: "Cilantro / Parsley", amount: "0.25", unit: "cup chopped", category: "Spices & Herbs" },
+      { name: "Rice", amount: "for serving", unit: "", category: "Grains & Staples" }
+    ],
+    dietary: ["High-Protein", "Quick"],
+    instructions: [
+      "Bake or deep-fry potato strips until golden and extra crispy.",
+      "Sear seasoned beef sirloin strips over extremely high heat in a wok for 3 minutes until browned. Remove beef.",
+      "In same pan, sauté thick red onion slices and garlic for 1 minute until fragrant but still crunchy.",
+      "Add tomato wedges, soy sauce, 1 tbsp vinegar, and cooked beef back to pan. Toss over high heat for 1 minute.",
+      "Fold crispy fries into stir-fry right before serving so they absorb savory juices while remaining crisp.",
+      "Serve hot alongside steamed white rice garnished with fresh cilantro."
+    ],
+    nutrition: { calories: 560, protein: 38, carbs: 48, fat: 22, fiber: 5, sodium: 690 }
+  },
+  {
+    recipeId: "rec-29",
+    title: "Middle Eastern Chicken Shawarma & Garlic Toum",
+    summary: "Warmly spiced grilled chicken shawarma served over fluffy turmeric rice with garlic toum sauce, pickles, and pita.",
+    cuisine: "Middle Eastern",
+    category: "Dinner",
+    difficulty: "Medium",
+    prepTime: 20,
+    cookTime: 15,
+    servings: 3,
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=800&q=80",
+    ingredients: [
+      { name: "Chicken Thighs", amount: "500", unit: "g boneless", category: "Proteins" },
+      { name: "Garlic", amount: "6", unit: "cloves", category: "Vegetables" },
+      { name: "Greek Yogurt", amount: "0.5", unit: "cup", category: "Dairy & Pantry" },
+      { name: "Lemon Juice", amount: "3", unit: "tbsp", category: "Pantry" },
+      { name: "Cumin", amount: "1", unit: "tbsp", category: "Spices & Herbs" },
+      { name: "Paprika", amount: "1", unit: "tbsp smoked", category: "Spices & Herbs" },
+      { name: "Turmeric", amount: "1", unit: "tsp", category: "Spices & Herbs" },
+      { name: "Basmati Rice", amount: "2", unit: "cups cooked", category: "Grains & Staples" },
+      { name: "Pita Bread", amount: "3", unit: "warm pitas", category: "Grains & Staples" }
+    ],
+    dietary: ["High-Protein"],
+    instructions: [
+      "Marinate chicken thighs in yogurt, lemon juice, garlic, cumin, paprika, turmeric, salt, and olive oil for 20 minutes.",
+      "Grill or pan-sear chicken over medium-high heat for 6-7 minutes per side until charred and cooked through. Slice into thin strips.",
+      "Whip garlic, lemon juice, salt, and neutral oil into a thick garlicky toum emulsion.",
+      "Serve warm shawarma chicken over fragrant turmeric rice with a side of warm pita bread and creamy garlic toum."
+    ],
+    nutrition: { calories: 520, protein: 42, carbs: 45, fat: 19, fiber: 4, sodium: 610 }
+  },
+  {
+    recipeId: "rec-30",
+    title: "Greek Chicken Souvlaki with Homemade Tzatziki",
+    summary: "Herb and lemon-marinated grilled chicken skewers served with cool cucumber garlic tzatziki dip and warm pita.",
+    cuisine: "Mediterranean",
+    category: "Lunch",
+    difficulty: "Easy",
+    prepTime: 15,
+    cookTime: 12,
+    servings: 3,
+    rating: 4.8,
+    image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+    ingredients: [
+      { name: "Chicken Breast", amount: "500", unit: "g cubed", category: "Proteins" },
+      { name: "Greek Yogurt", amount: "1", unit: "cup", category: "Dairy & Pantry" },
+      { name: "Cucumber", amount: "1", unit: "grated & drained", category: "Vegetables" },
+      { name: "Garlic", amount: "4", unit: "cloves minced", category: "Vegetables" },
+      { name: "Lemon Juice", amount: "2", unit: "tbsp", category: "Pantry" },
+      { name: "Oregano", amount: "1", unit: "tbsp dried", category: "Spices & Herbs" },
+      { name: "Olive Oil", amount: "3", unit: "tbsp", category: "Pantry" },
+      { name: "Pita Bread", amount: "3", unit: "pieces", category: "Grains & Staples" }
+    ],
+    dietary: ["High-Protein", "Gluten-Free", "Quick"],
+    instructions: [
+      "Toss cubed chicken in olive oil, lemon juice, garlic, oregano, salt, and pepper. Thread onto skewers.",
+      "Make tzatziki: mix Greek yogurt, grated cucumber, minced garlic, lemon juice, and salt.",
+      "Grill chicken skewers for 10-12 minutes, turning occasionally until nicely charred and cooked through.",
+      "Warm pita breads on grill for 1 minute.",
+      "Serve chicken souvlaki skewers with fresh tzatziki dip, warm pita, and cherry tomato salad."
+    ],
+    nutrition: { calories: 440, protein: 41, carbs: 32, fat: 16, fiber: 3, sodium: 530 }
+  },
+  {
+    recipeId: "rec-31",
+    title: "Moroccan Lamb & Apricot Tagine with Couscous",
+    summary: "Slow-simmered Moroccan spiced lamb stew with sweet dried apricots, chickpeas, toasted almonds, and fluffy couscous.",
+    cuisine: "Middle Eastern",
+    category: "Dinner",
+    difficulty: "Hard",
+    prepTime: 20,
+    cookTime: 45,
+    servings: 4,
+    rating: 5.0,
+    image: "https://images.unsplash.com/photo-1541518763669-27fef04b14da?auto=format&fit=crop&w=800&q=80",
+    ingredients: [
+      { name: "Lamb", amount: "600", unit: "g diced leg of lamb", category: "Proteins" },
+      { name: "Couscous", amount: "1.5", unit: "cups steamed", category: "Grains & Staples" },
+      { name: "Chickpeas", amount: "1", unit: "can (400g)", category: "Grains & Staples" },
+      { name: "Dried Apricots", amount: "0.75", unit: "cup halved", category: "Fruits" },
+      { name: "Onion", amount: "1", unit: "diced", category: "Vegetables" },
+      { name: "Garlic", amount: "4", unit: "cloves", category: "Vegetables" },
+      { name: "Ras el Hanout", amount: "1.5", unit: "tbsp Moroccan spices", category: "Spices & Herbs" },
+      { name: "Honey", amount: "1", unit: "tbsp", category: "Pantry" }
+    ],
+    dietary: ["High-Protein"],
+    instructions: [
+      "Sear diced lamb chunks in a tagine or heavy pot with olive oil until browned. Remove lamb.",
+      "Sauté diced onion and garlic with Ras el Hanout, cinnamon, and ginger for 2 minutes until fragrant.",
+      "Return lamb to pot, add drained chickpeas, dried apricots, honey, and 2 cups broth.",
+      "Cover and simmer on low heat for 40 minutes until lamb is melt-in-your-mouth tender and sauce is rich.",
+      "Prepare couscous by pouring boiling water over grains, cover for 5 minutes, then fluff with a fork.",
+      "Spoon aromatic lamb tagine over couscous, garnished with toasted almonds and fresh cilantro."
+    ],
+    nutrition: { calories: 590, protein: 42, carbs: 58, fat: 20, fiber: 8, sodium: 540 }
+  },
+  {
+    recipeId: "rec-32",
+    title: "Indian Butter Chicken (Murgh Makhani) & Naan",
+    summary: "Tender yogurt-marinated chicken thighs simmered in a velvety tomato, butter, cashew cream curry served with garlic naan.",
+    cuisine: "Indian",
+    category: "Dinner",
+    difficulty: "Medium",
+    prepTime: 20,
+    cookTime: 25,
+    servings: 4,
+    rating: 5.0,
+    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=800&q=80",
+    ingredients: [
+      { name: "Chicken Thighs", amount: "600", unit: "g boneless cubed", category: "Proteins" },
+      { name: "Butter", amount: "3", unit: "tbsp", category: "Dairy & Pantry" },
+      { name: "Heavy Cream", amount: "0.5", unit: "cup", category: "Dairy & Pantry" },
+      { name: "Tomatoes", amount: "1", unit: "can (400g puree)", category: "Vegetables" },
+      { name: "Garam Masala", amount: "1", unit: "tbsp", category: "Spices & Herbs" },
+      { name: "Garlic", amount: "5", unit: "cloves", category: "Vegetables" },
+      { name: "Ginger", amount: "1.5", unit: "tbsp minced", category: "Vegetables" },
+      { name: "Flatbread / Naan", amount: "4", unit: "garlic naans", category: "Grains & Staples" }
+    ],
+    dietary: ["High-Protein", "Gluten-Free"],
+    instructions: [
+      "Marinate chicken cubes in Greek yogurt, lemon juice, garlic, ginger, and garam masala for 15 minutes.",
+      "Sear chicken cubes in skillet over high heat for 6 minutes until lightly charred. Set aside.",
+      "Melt butter in deep skillet, sauté garlic and ginger for 1 minute.",
+      "Add tomato puree, garam masala, chili powder, and cumin. Simmer for 10 minutes until sauce darkens.",
+      "Blend sauce until silky smooth, stir in heavy cream and cooked chicken.",
+      "Simmer for 5 minutes. Serve piping hot with warm garlic naan and steamed basmati rice."
+    ],
+    nutrition: { calories: 570, protein: 39, carbs: 38, fat: 28, fiber: 4, sodium: 650 }
+  },
+  {
+    recipeId: "rec-33",
+    title: "Fragrant Royal Vegetable Dum Biryani",
+    summary: "Layered aromatic basmati rice slow-cooked with saffron, mint, fried onions, and spiced garden vegetables.",
+    cuisine: "Indian",
+    category: "Dinner",
+    difficulty: "Hard",
+    prepTime: 25,
+    cookTime: 35,
+    servings: 4,
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80",
+    ingredients: [
+      { name: "Basmati Rice", amount: "2", unit: "cups aged basmati", category: "Grains & Staples" },
+      { name: "Potatoes", amount: "2", unit: "cubed", category: "Vegetables" },
+      { name: "Carrots", amount: "1", unit: "diced", category: "Vegetables" },
+      { name: "Peas", amount: "0.5", unit: "cup", category: "Vegetables" },
+      { name: "Onion", amount: "2", unit: "thinly sliced & fried", category: "Vegetables" },
+      { name: "Yogurt / Milk", amount: "0.75", unit: "cup yogurt", category: "Dairy & Pantry" },
+      { name: "Garam Masala", amount: "1", unit: "tbsp whole biryani spices", category: "Spices & Herbs" },
+      { name: "Saffron", amount: "1", unit: "pinch in 2 tbsp warm milk", category: "Spices & Herbs" }
+    ],
+    dietary: ["Vegetarian", "Gluten-Free"],
+    instructions: [
+      "Par-boil basmati rice with whole spices (cardamom, cloves, bay leaf) until 70% cooked. Drain.",
+      "Sauté potatoes, carrots, and peas with spiced yogurt masala until tender.",
+      "In a heavy pot, layer spiced vegetable gravy at bottom, followed by par-boiled basmati rice.",
+      "Drizzle saffron milk, golden fried onions, fresh mint, and ghee over top layer.",
+      "Seal pot lid tightly with foil and cook on lowest flame ('dum') for 25 minutes.",
+      "Gently fluff biryani layers and serve hot with cool cucumber raita."
+    ],
+    nutrition: { calories: 430, protein: 11, carbs: 72, fat: 11, fiber: 7, sodium: 490 }
+  },
+  {
+    recipeId: "rec-34",
+    title: "Classic French Provencal Ratatouille",
+    summary: "Artfully layered sliced zucchini, eggplant, bell peppers, and ripe tomatoes baked in a rich garlic herb sauce.",
+    cuisine: "French",
+    category: "Dinner",
+    difficulty: "Medium",
+    prepTime: 20,
+    cookTime: 40,
+    servings: 4,
+    rating: 4.8,
+    image: "https://images.unsplash.com/photo-1572453800999-e8d2d1589b7c?auto=format&fit=crop&w=800&q=80",
+    ingredients: [
+      { name: "Zucchini", amount: "2", unit: "sliced thinly", category: "Vegetables" },
+      { name: "Eggplant", amount: "1", unit: "sliced thinly", category: "Vegetables" },
+      { name: "Tomatoes", amount: "4", unit: "ripe sliced", category: "Vegetables" },
+      { name: "Bell Peppers", amount: "2", unit: "roasted & pureed", category: "Vegetables" },
+      { name: "Garlic", amount: "4", unit: "cloves minced", category: "Vegetables" },
+      { name: "Olive Oil", amount: "3", unit: "tbsp", category: "Pantry" },
+      { name: "Basil", amount: "1", unit: "handful fresh", category: "Spices & Herbs" },
+      { name: "Italian Seasoning", amount: "1", unit: "tbsp herbs de Provence", category: "Spices & Herbs" }
+    ],
+    dietary: ["Vegan", "Vegetarian", "Gluten-Free", "Low-Carb"],
+    instructions: [
+      "Blend roasted red bell peppers, garlic, onion, crushed tomatoes, and olive oil into a smooth base sauce.",
+      "Spread red pepper sauce evenly over bottom of a round baking dish.",
+      "Alternately stack thin slices of zucchini, eggplant, and tomato into a tight spiral pattern over sauce.",
+      "Drizzle with garlic herb olive oil, season with salt and pepper, and cover with parchment paper.",
+      "Bake at 190°C (375°F) for 40 minutes until vegetables are tender and sauce is bubbling.",
+      "Garnish with fresh basil leaves and serve hot with crusty baguette."
+    ],
+    nutrition: { calories: 210, protein: 5, carbs: 24, fat: 11, fiber: 8, sodium: 290 }
+  },
+  {
+    recipeId: "rec-35",
+    title: "Authentic Spanish Seafood Paella",
+    summary: "Saffron-infused rice cooked in a wide pan with jumbo shrimp, mussels, calamari, bell peppers, and smoked paprika.",
+    cuisine: "Spanish",
+    category: "Dinner",
+    difficulty: "Hard",
+    prepTime: 20,
+    cookTime: 30,
+    servings: 4,
+    rating: 5.0,
+    image: "https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&w=800&q=80",
+    ingredients: [
+      { name: "Shrimp", amount: "300", unit: "g jumbo raw", category: "Proteins" },
+      { name: "Mussels / Calamari", amount: "250", unit: "g fresh", category: "Proteins" },
+      { name: "Arborio Rice", amount: "1.5", unit: "cups paella rice", category: "Grains & Staples" },
+      { name: "Bell Peppers", amount: "1", unit: "diced red pepper", category: "Vegetables" },
+      { name: "Tomatoes", amount: "2", unit: "grated", category: "Vegetables" },
+      { name: "Garlic", amount: "4", unit: "cloves minced", category: "Vegetables" },
+      { name: "Saffron", amount: "1", unit: "pinch infused in broth", category: "Spices & Herbs" },
+      { name: "Paprika", amount: "1", unit: "tbsp smoked", category: "Spices & Herbs" }
+    ],
+    dietary: ["High-Protein", "Gluten-Free"],
+    instructions: [
+      "Heat olive oil in a wide paella pan. Sauté diced red peppers, garlic, and grated tomatoes for 5 minutes (sofrito).",
+      "Stir in smoked paprika, saffron-infused seafood broth, and short-grain rice. Spread rice evenly across pan.",
+      "Simmer uncovered on medium heat for 15 minutes without stirring to allow socarrat (crispy bottom crust) to form.",
+      "Nestle raw jumbo shrimp and clean mussels into top of rice.",
+      "Cook for another 8-10 minutes until seafood is cooked and mussels pop open.",
+      "Remove from heat, cover with kitchen towel for 5 minutes, and serve with lemon wedges."
+    ],
+    nutrition: { calories: 490, protein: 36, carbs: 54, fat: 14, fiber: 4, sodium: 640 }
+  },
+  {
+    recipeId: "rec-36",
+    title: "Jamaican Jerk Chicken with Coconut Rice & Peas",
+    summary: "Fiery island jerk-marinated chicken thighs fire-grilled and served with sweet coconut rice and red kidney beans.",
+    cuisine: "Caribbean",
+    category: "Dinner",
+    difficulty: "Medium",
+    prepTime: 20,
+    cookTime: 25,
+    servings: 4,
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=800&q=80",
+    ingredients: [
+      { name: "Chicken Thighs", amount: "600", unit: "g bone-in or cutlet", category: "Proteins" },
+      { name: "Kidney Beans", amount: "1", unit: "can (400g)", category: "Grains & Staples" },
+      { name: "Rice", amount: "1.5", unit: "cups long grain", category: "Grains & Staples" },
+      { name: "Coconut Milk", amount: "1", unit: "can (400ml)", category: "Pantry" },
+      { name: "Jerk Seasoning", amount: "2", unit: "tbsp Jamaican jerk paste", category: "Pantry" },
+      { name: "Garlic", amount: "3", unit: "cloves", category: "Vegetables" },
+      { name: "Green Onion", amount: "3", unit: "stalks", category: "Vegetables" },
+      { name: "Lime Juice", amount: "2", unit: "tbsp", category: "Pantry" }
+    ],
+    dietary: ["High-Protein", "Gluten-Free"],
+    instructions: [
+      "Coat chicken thighs thoroughly with Jamaican jerk seasoning paste, lime juice, minced garlic, and soy sauce. Marinate for 20 minutes.",
+      "Cook rice in coconut milk, 1 cup water, drained kidney beans, thyme sprig, and salt until fluffy.",
+      "Grill or pan-sear jerk chicken over medium-high heat for 6-8 minutes per side until charred, smoky, and cooked through.",
+      "Fluff coconut rice and red kidney beans with a fork.",
+      "Serve smoky jerk chicken over coconut rice with sweet fried plantains or sliced lime."
+    ],
+    nutrition: { calories: 570, protein: 41, carbs: 56, fat: 20, fiber: 6, sodium: 620 }
   }
 ];
 
@@ -664,7 +1189,7 @@ const seedData = async () => {
     await mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/whiskedaway');
     console.log('Seeding data to MongoDB...');
 
-    // Clear existing
+    // Clear existing recipes & ingredients
     await Recipe.deleteMany({ isCustom: { $ne: true } });
     await Ingredient.deleteMany({ isCustom: { $ne: true } });
 

@@ -3,32 +3,38 @@ const Ingredient = require('../models/Ingredient');
 // Default backup categorized ingredient list
 const PANTRY_INGREDIENTS_LIST = {
   "Vegetables": [
-    "Avocado", "Asparagus", "Bell Peppers", "Broccoli", "Carrots", "Celery",
-    "Cherry Tomatoes", "Cucumber", "Garlic", "Ginger", "Green Onion", "Mushrooms",
-    "Onion", "Potatoes", "Red Onion", "Spinach", "Tomatoes", "Zucchini"
+    "Asparagus", "Avocado", "Bell Peppers", "Bok Choy", "Broccoli", "Carrots", "Celery",
+    "Cherry Tomatoes", "Cucumber", "Eggplant", "Edamame", "Garlic", "Ginger", "Green Beans",
+    "Green Onion", "Mushrooms", "Onion", "Peas", "Potatoes", "Red Onion", "Spinach",
+    "Tomatoes", "Zucchini"
   ],
   "Proteins": [
-    "Chicken Breast", "Eggs", "Salmon Fillet", "Shrimp", "Tofu"
+    "Beef Steak", "Bacon", "Chicken Breast", "Chicken Thighs", "Eggs", "Ground Beef",
+    "Lamb", "Mussels / Calamari", "Salmon Fillet", "Shrimp", "Tofu"
   ],
   "Dairy & Pantry": [
-    "Butter", "Cheddar Cheese", "Feta Cheese", "Heavy Cream", "Milk",
-    "Mozzarella Cheese", "Parmesan Cheese", "Peanut Butter", "Sour Cream / Yogurt", "Yogurt / Milk"
+    "Butter", "Cheddar Cheese", "Feta Cheese", "Heavy Cream", "Greek Yogurt", "Milk",
+    "Mozzarella Cheese", "Parmesan Cheese", "Peanut Butter", "Pecorino Cheese",
+    "Sour Cream / Yogurt", "Yogurt / Milk"
   ],
   "Grains & Staples": [
-    "Arborio Rice", "Black Beans", "Bread", "Chickpeas", "Flatbread / Naan",
-    "Kidney Beans", "Oats", "Penne Pasta", "Pasta", "Rice", "Rice Noodles", "Tortillas"
+    "Arborio Rice", "Basmati Rice", "Black Beans", "Bread", "Chickpeas", "Couscous",
+    "Flatbread / Naan", "Kidney Beans", "Oats", "Penne Pasta", "Pita Bread", "Pasta",
+    "Ramen Noodles", "Rice", "Rice Noodles", "Spaghetti", "Tortillas"
   ],
   "Fruits": [
-    "Banana", "Mixed Berries"
+    "Banana", "Dried Apricots", "Lemon", "Lime", "Mixed Berries"
   ],
   "Pantry": [
-    "Cornstarch", "Honey", "Lemon Juice", "Lime Juice", "Maple Syrup", "Olive Oil",
-    "Salsa", "Sesame Oil", "Soy Sauce", "Sun-Dried Tomatoes", "Tomato Sauce", "Vegetable Broth"
+    "Coconut Milk", "Cornstarch", "Gochujang", "Honey", "Jerk Seasoning", "Lemon Juice",
+    "Lime Juice", "Maple Syrup", "Miso Paste", "Olive Oil", "Peanut Oil", "Salsa",
+    "Sesame Oil", "Soy Sauce", "Sun-Dried Tomatoes", "Tamarind Paste", "Tomato Paste",
+    "Tomato Sauce", "Vegetable Broth"
   ],
   "Spices & Herbs": [
-    "Basil", "Baking Powder", "Chia Seeds", "Chili Flakes", "Chili Powder", "Cumin",
-    "Garam Masala", "Garlic Powder", "Italian Seasoning", "Oregano", "Paprika",
-    "Salt & Black Pepper", "Turmeric"
+    "Baking Powder", "Basil", "Chia Seeds", "Chili Flakes", "Chili Powder", "Cilantro / Parsley",
+    "Cumin", "Garam Masala", "Garlic Powder", "Italian Seasoning", "Oregano", "Paprika",
+    "Ras el Hanout", "Saffron", "Salt & Black Pepper", "Turmeric"
   ]
 };
 
