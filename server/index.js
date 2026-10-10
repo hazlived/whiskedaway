@@ -22,6 +22,9 @@ dotenv.config();
 
 const app = express();
 
+// Trust reverse proxy for Render / Vercel HTTPS cookies
+app.set('trust proxy', 1);
+
 // Database Connection & Auto-Seed check
 connectDB().then(async () => {
   try {
@@ -49,7 +52,13 @@ const allowedOrigins = [
 ].filter(Boolean);
 
 app.use(cors({
-  origin: allowedOrigins,
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin) || origin.endsWith('.vercel.app')) {
+      callback(null, true);
+    } else {
+      callback(null, true); // Allow origin in production
+    }
+  },
   credentials: true
 }));
 
