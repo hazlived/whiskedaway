@@ -100,6 +100,15 @@ const AuthModal = () => {
 
   if (!authModalOpen) return null;
 
+  const getErrorMessage = (err, fallback) => {
+    if (typeof err === 'string') return err;
+    if (err.response?.data?.error?.message) return err.response.data.error.message;
+    if (typeof err.response?.data?.error === 'string') return err.response.data.error;
+    if (err.response?.data?.message) return err.response.data.message;
+    if (err.message) return err.message;
+    return fallback;
+  };
+
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
     setErrorMsg(null);
@@ -117,7 +126,7 @@ const AuthModal = () => {
         });
       }
     } catch (err) {
-      setErrorMsg(err.response?.data?.error?.message || 'Failed to sign in. Check your credentials.');
+      setErrorMsg(getErrorMessage(err, 'Failed to sign in. Check your credentials.'));
     } finally {
       setLoading(false);
     }
@@ -125,6 +134,17 @@ const AuthModal = () => {
 
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
+
+    if (usernameStatus && !usernameStatus.available) {
+      setErrorMsg(usernameStatus.reason || 'That username is already taken.');
+      return;
+    }
+
+    if (emailStatus && !emailStatus.available) {
+      setErrorMsg(emailStatus.reason || 'That email is already registered.');
+      return;
+    }
+
     setErrorMsg(null);
     setLoading(true);
 
@@ -133,7 +153,7 @@ const AuthModal = () => {
       setIsVerifyStep(true);
       showToast('Account created! Enter the 6-digit code sent to your email.');
     } catch (err) {
-      setErrorMsg(err.response?.data?.error?.message || 'Registration failed. Please check form inputs.');
+      setErrorMsg(getErrorMessage(err, 'Registration failed. Please check form inputs.'));
     } finally {
       setLoading(false);
     }
@@ -157,7 +177,7 @@ const AuthModal = () => {
         });
       }
     } catch (err) {
-      setErrorMsg(err.response?.data?.error?.message || 'Invalid or expired 6-digit passcode.');
+      setErrorMsg(getErrorMessage(err, 'Invalid or expired 6-digit passcode.'));
     } finally {
       setLoading(false);
     }
@@ -173,7 +193,7 @@ const AuthModal = () => {
       const res = await forgotPassword(forgotEmail);
       setSuccessMsg(res.message);
     } catch (err) {
-      setErrorMsg(err.response?.data?.error?.message || 'Request failed.');
+      setErrorMsg(getErrorMessage(err, 'Request failed.'));
     } finally {
       setLoading(false);
     }
@@ -189,7 +209,7 @@ const AuthModal = () => {
       setForgotUnlocked(true);
       showToast('Passcode verified! Enter your new password.');
     } catch (err) {
-      setErrorMsg(err.response?.data?.error?.message || 'Invalid or expired passcode.');
+      setErrorMsg(getErrorMessage(err, 'Invalid or expired passcode.'));
     } finally {
       setLoading(false);
     }
@@ -212,7 +232,7 @@ const AuthModal = () => {
       setForgotUnlocked(false);
       setAuthModalMode('login');
     } catch (err) {
-      setErrorMsg(err.response?.data?.error?.message || 'Password reset failed.');
+      setErrorMsg(getErrorMessage(err, 'Password reset failed.'));
     } finally {
       setLoading(false);
     }

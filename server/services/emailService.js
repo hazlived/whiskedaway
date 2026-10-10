@@ -26,9 +26,13 @@ const sendEmail = async ({ to, subject, text, html }) => {
           text,
           html
         });
-        const resendId = response.data?.id || response.id || 'sent';
-        console.log(`\n[RESEND API EMAIL DISPATCHED] ID: ${resendId} | To: ${to} | Subject: ${subject}\n`);
-        return { success: true, id: resendId, provider: 'resend' };
+        if (response.error) {
+          console.error('[RESEND API REJECTED EMAIL]', response.error.message || response.error);
+        } else {
+          const resendId = response.data?.id || response.id || 'sent';
+          console.log(`\n[RESEND API EMAIL DISPATCHED] ID: ${resendId} | To: ${to} | Subject: ${subject}\n`);
+          return { success: true, id: resendId, provider: 'resend' };
+        }
       } catch (err) {
         console.error('[RESEND API ERROR]', err.message);
       }
