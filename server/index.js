@@ -109,4 +109,18 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server running in ${process.env.NODE_ENV || 'development'} mode on port ${PORT}`);
+
+  // Self-ping heartbeat to keep Render free tier awake
+  if (process.env.NODE_ENV === 'production') {
+    const https = require('https');
+    const RENDER_HEALTH_URL = 'https://whiskedaway.onrender.com/api/health';
+
+    setInterval(() => {
+      https.get(RENDER_HEALTH_URL, (res) => {
+        console.log(`[KEEP-ALIVE] Heartbeat ping sent to Render. Status: ${res.statusCode}`);
+      }).on('error', (err) => {
+        console.log('[KEEP-ALIVE] Self-ping failed:', err.message);
+      });
+    }, 14 * 60 * 1000); // Ping every 14 minutes
+  }
 });

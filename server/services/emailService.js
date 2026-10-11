@@ -13,30 +13,56 @@ const getResendClient = () => {
 
 // Send Email Core
 const sendEmail = async ({ to, subject, text, html }) => {
-  const from = process.env.RESEND_FROM || process.env.SMTP_FROM || 'WhiskedAway <onboarding@resend.dev>';
-
-  // 1. Try Resend API if RESEND_API_KEY is configured
-    const resend = getResendClient();
-    if (resend) {
-      try {
-        const response = await resend.emails.send({
-          from,
-          to: Array.isArray(to) ? to : [to],
-          subject,
-          text,
-          html
-        });
-        if (response.error) {
-          console.error('[RESEND API REJECTED EMAIL]', response.error.message || response.error);
-        } else {
-          const resendId = response.data?.id || response.id || 'sent';
-          console.log(`\n[RESEND API EMAIL DISPATCHED] ID: ${resendId} | To: ${to} | Subject: ${subject}\n`);
-          return { success: true, id: resendId, provider: 'resend' };
+  // 1. Try real SMTP (e.g. Gmail App Password, Brevo, SendGrid) if configured
+  if (process.env.SMTP_USER && process.env.SMTP_PASS) {
+    try {
+      const port = parseInt(process.env.SMTP_PORT || '465', 10);
+      const transporter = nodemailer.createTransport({
+        host: process.env.SMTP_HOST || 'smtp.gmail.com',
+        port,
+        secure: port === 465,
+        auth: {
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_PASS
         }
-      } catch (err) {
-        console.error('[RESEND API ERROR]', err.message);
-      }
+      });
+      const info = await transporter.sendMail({
+        from: process.env.SMTP_FROM || `WhiskedAway <${process.env.SMTP_USER}>`,
+        to,
+        subject,
+        text,
+        html
+      });
+      console.log(`\n[SMTP EMAIL DISPATCHED] ID: ${info.messageId} | To: ${to} | Subject: ${subject}\n`);
+      return { success: true, id: info.messageId, provider: 'smtp' };
+    } catch (err) {
+      console.error('[SMTP EMAIL DISPATCH ERROR]', err.message);
     }
+  }
+
+  // 2. Try Resend API if RESEND_API_KEY is configured
+  const from = process.env.RESEND_FROM || process.env.SMTP_FROM || 'WhiskedAway <onboarding@resend.dev>';
+  const resend = getResendClient();
+  if (resend) {
+    try {
+      const response = await resend.emails.send({
+        from,
+        to: Array.isArray(to) ? to : [to],
+        subject,
+        text,
+        html
+      });
+      if (response.error) {
+        console.error('[RESEND API REJECTED EMAIL]', response.error.message || response.error);
+      } else {
+        const resendId = response.data?.id || response.id || 'sent';
+        console.log(`\n[RESEND API EMAIL DISPATCHED] ID: ${resendId} | To: ${to} | Subject: ${subject}\n`);
+        return { success: true, id: resendId, provider: 'resend' };
+      }
+    } catch (err) {
+      console.error('[RESEND API ERROR]', err.message);
+    }
+  }
 
   // 2. Nodemailer Ethereal test account fallback for dev
   try {
